@@ -1,3 +1,5 @@
+"""Telegram бот @https://t.me/big_NLP_bot"""
+
 from telebot import TeleBot
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 import requests
@@ -19,6 +21,7 @@ def send_welcome(message):
     for crypto_name in CRYPTO_NAME_TO_TICKER.keys():
         item_button = KeyboardButton(crypto_name)
         markup.add(item_button)
+    bot.send_message(message.chat.id, "Бот от Александр Викторовича", reply_markup=markup)
     bot.send_message(message.chat.id, "Выбирите крипту", reply_markup=markup)
 
 @bot.message_handler(func=lambda message: message.text in CRYPTO_NAME_TO_TICKER.keys())
