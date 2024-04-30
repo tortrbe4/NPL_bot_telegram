@@ -1,4 +1,4 @@
-"""Telegram бот @https://t.me/big_NLP_bot"""
+"""Telegram бот https://t.me/big_NLP_bot"""
 
 from telebot import TeleBot
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton
